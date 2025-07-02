@@ -61,6 +61,7 @@ typedef NS_ENUM(NSUInteger, ExpansionDirection) {
 
 // Public Methods
 - (void)addButtons:(NSArray *)buttons;
+- (void)addButtonsTwo:(NSArray *)buttons;
 - (void)addButton:(UIButton *)button;
 - (void)showButtons;
 - (void)dismissButtons;

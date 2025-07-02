@@ -23,6 +23,20 @@
 #pragma mark -
 #pragma mark Public Methods
 
+- (void)addButtonsTwo:(NSArray *)buttons {
+    NSAssert(buttons != nil, @"buttons array cannot be nil");
+    
+    self.buttonContainer = [NSMutableArray arrayWithArray:buttons];
+    for (UIButton *button in buttons) {
+        [self addSubview:button];
+        button.hidden = YES;
+    }
+
+    if (self.homeButtonView != nil) {
+        [self bringSubviewToFront:self.homeButtonView];
+    }
+}
+
 - (void)addButtons:(NSArray *)buttons {
     assert(buttons != nil);
     for (UIButton *button in buttons) {
